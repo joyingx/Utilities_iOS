@@ -140,4 +140,8 @@
     self.frame   = frame;
 }
 
+- (void)setCornerRadius:(CGFloat)cornerRadius maskToBounds:(BOOL)mask {
+    self.cornerRadius = cornerRadius;
+    self.masksToBounds = mask;
+}
 @end
