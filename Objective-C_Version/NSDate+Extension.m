@@ -64,6 +64,83 @@
     return NO;
 }
 
+- (BOOL)isToday {
+    NSDate *now = [NSDate date];
+    if (now.year == self.year && now.month == self.month && now.day == self.day) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isYesterday {
+    NSDate *yesterday = [[NSDate date] dateByAddingDays:-1];
+    if (yesterday.year == self.year && yesterday.month == self.month && yesterday.day == self.day) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isTomorrow {
+    NSDate *tomorrow = [[NSDate date] dateByAddingDays:1];
+    if (tomorrow.year == self.year && tomorrow.month == self.month && tomorrow.day == self.day) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isThisWeek {
+    NSDate *now = [NSDate date];
+    if (self.year == now.year && self.weekOfYear == now.weekOfYear) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isThisMonth {
+    NSDate *now = [NSDate date];
+    if (self.year == now.year && self.month == now.month) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isThisYear {
+    NSDate *now = [NSDate date];
+    if (self.year == now.year) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isSameWeekAsDate:(NSDate *)date {
+    if (self.year == date.year && self.weekOfYear == date.weekOfYear) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isSameMonthAsDate:(NSDate *)date {
+    if (self.year == date.year && self.month == date.month) {
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (BOOL)isSameYearAsDate:(NSDate *)date {
+    if (self.year == date.year) {
+        return YES;
+    }
+    
+    return NO;
+}
 
 - (NSDate *)dateByAddingYears:(NSInteger)years {
     NSCalendar *currentCalendar = [NSCalendar currentCalendar];
