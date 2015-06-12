@@ -19,8 +19,19 @@
 @property (nonatomic) CGFloat centerX;
 @property (nonatomic) CGFloat centerY;
 @property (nonatomic) CGPoint origin;
+
+@property (nonatomic) CGFloat cornerRadius;
+@property (nonatomic) CGFloat borderWidth;
+@property (nonatomic) UIColor *borderColor;
+@property (nonatomic) float shadowOpacity;
+@property (nonatomic) CGFloat shadowRadius;
+@property (nonatomic) CGSize shadowOffset;
+@property (nonatomic) UIColor *shadowColor;
+@property (nonatomic) UIBezierPath *shadowPath;
+
 @property (nonatomic) CGSize size;
 
 - (UIImage *)snapshotImage;
+- (void)setCornerRadius:(CGFloat)cornerRadius maskToBounds:(BOOL)mask;
 
 @end
