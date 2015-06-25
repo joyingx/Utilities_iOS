@@ -164,22 +164,27 @@
 }
 
 - (NSDate *)dateByAddingDays:(NSInteger)days {
-    NSTimeInterval secondsPerDay = 24 * 60 * 60 * days;
-    return [NSDate dateWithTimeInterval:secondsPerDay sinceDate:self];
+    NSDateComponents *componets = [[NSDateComponents alloc] init];
+    [componets setDay:days];
+    return [[NSCalendar currentCalendar] dateByAddingComponents:componets toDate:self options:0];
 }
 
 - (NSDate *)dateByAddingHours:(NSInteger)hours {
-    NSTimeInterval secondsPerHour = 60 * 60 * hours;
-    return [NSDate dateWithTimeInterval:secondsPerHour sinceDate:self];
+    NSDateComponents *componets = [[NSDateComponents alloc] init];
+    [componets setHour:hours];
+    return [[NSCalendar currentCalendar] dateByAddingComponents:componets toDate:self options:0];
 }
 
 - (NSDate *)dateByAddingMinutes:(NSInteger)minutes {
-    NSTimeInterval secondsPerMinutes = 60 * minutes;
-    return [NSDate dateWithTimeInterval:secondsPerMinutes sinceDate:self];
+    NSDateComponents *componets = [[NSDateComponents alloc] init];
+    [componets setMinute:minutes];
+    return [[NSCalendar currentCalendar] dateByAddingComponents:componets toDate:self options:0];
 }
 
 - (NSDate *)dateByAddingSeconds:(NSInteger)seconds {
-    return [NSDate dateWithTimeInterval:seconds sinceDate:self];
+    NSDateComponents *componets = [[NSDateComponents alloc] init];
+    [componets setSecond:seconds];
+    return [[NSCalendar currentCalendar] dateByAddingComponents:componets toDate:self options:0];
 }
 
 

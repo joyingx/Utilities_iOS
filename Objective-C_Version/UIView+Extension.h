@@ -33,5 +33,6 @@
 
 - (UIImage *)snapshotImage;
 - (void)setCornerRadius:(CGFloat)cornerRadius maskToBounds:(BOOL)mask;
+- (void)removeAllSubviews;
 
 @end

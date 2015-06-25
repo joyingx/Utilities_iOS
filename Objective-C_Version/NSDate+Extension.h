@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-static const NSInteger kSecondsPerMinute = 60;
-static const NSInteger kMinutesPerHour   = 60;
-static const NSInteger kHoursPerDay      = 24;
-static const NSInteger kDaysPerWeek      = 7;
-static const NSInteger kSecondsPerHour   = kMinutesPerHour * kSecondsPerMinute;
-static const NSInteger kSecondsPerDay    = kHoursPerDay * kSecondsPerHour;
-static const NSInteger kSecondsPerWeek   = kDaysPerWeek * kSecondsPerDay;
-static const NSInteger kHoursPerWeek     = kDaysPerWeek * kHoursPerDay;
+static const NSTimeInterval kSecondsPerMinute = 60.0;
+static const NSTimeInterval kMinutesPerHour   = 60.0;
+static const NSTimeInterval kHoursPerDay      = 24.0;
+static const NSTimeInterval kDaysPerWeek      = 7.0;
+static const NSTimeInterval kSecondsPerHour   = kMinutesPerHour * kSecondsPerMinute;
+static const NSTimeInterval kSecondsPerDay    = kHoursPerDay * kSecondsPerHour;
+static const NSTimeInterval kSecondsPerWeek   = kDaysPerWeek * kSecondsPerDay;
+static const NSTimeInterval kHoursPerWeek     = kDaysPerWeek * kHoursPerDay;
 
 @interface NSDate (Extension)
 

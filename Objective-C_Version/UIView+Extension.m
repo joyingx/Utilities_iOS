@@ -25,6 +25,12 @@
     return snapshot;
 }
 
+- (void)removeAllSubviews {
+    for (UIView *subview in self.subviews) {
+        [subview removeFromSuperview];
+    }
+}
+
 #pragma mark - Getter Methods
 - (CGFloat)left {
     return self.frame.origin.x;
