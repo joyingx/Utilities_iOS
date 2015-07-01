@@ -23,6 +23,7 @@
 @property (nonatomic) CGPoint origin;
 @property (nonatomic) CGSize  size;
 
+- (void)removeAllSublayer;
 - (UIImage *)snapshotImage;
 - (void)setShadow:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius;
 - (void)setCornerRadius:(CGFloat)cornerRadius maskToBounds:(BOOL)mask;

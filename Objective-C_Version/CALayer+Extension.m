@@ -9,6 +9,11 @@
 #import "CALayer+Extension.h"
 
 @implementation CALayer (Extension)
+- (void)removeAllSublayer {
+    for (CALayer *layer in self.sublayers) {
+        [layer removeFromSuperlayer];
+    }
+}
 
 - (UIImage *)snapshotImage {
     UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0);
