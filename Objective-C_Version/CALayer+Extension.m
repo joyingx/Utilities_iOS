@@ -10,8 +10,8 @@
 
 @implementation CALayer (Extension)
 - (void)removeAllSublayer {
-    for (CALayer *layer in self.sublayers) {
-        [layer removeFromSuperlayer];
+    while (self.sublayers.count) {
+        [[self.sublayers firstObject] removeFromSuperlayer];
     }
 }
 
