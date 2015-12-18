@@ -1,9 +1,8 @@
 //
 //  UIColor+Extension.h
-//  UtilitiesDemo
 //
-//  Created by joyingx on 15/5/28.
-//  Copyright (c) 2015年 joyingx. All rights reserved.
+//  Created by Joyingx on 15/5/28.
+//  Copyright (c) 2015年 Joyingx. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -1,9 +1,8 @@
 //
 //  UIView+Extension.m
-//  UtilitiesDemo
 //
-//  Created by joyingx on 15/6/3.
-//  Copyright (c) 2015年 joyingx. All rights reserved.
+//  Created by Joyingx on 15/6/3.
+//  Copyright (c) 2015年 Joyingx. All rights reserved.
 //
 
 #import "UIView+Extension.h"
